@@ -1,6 +1,6 @@
 # Sample React + Redux application
 
-Application uses: ES2015+, React, Redux, React-Router, Redux-Form, Redux-saga, redux-thunk, Reselect, Create React App, Jest, Enzyme
+Application uses: ES2015+, React, Redux, React-Router, Redux-Form, Redux-saga ,Redux-thunk, Reselect, Create React App, Jest, Enzyme
 
 1. `npm install`
 2. `npm start`
