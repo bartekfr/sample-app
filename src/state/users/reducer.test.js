@@ -66,8 +66,8 @@ describe('Users reducer and action creators', () => {
     });
   });
 
-  describe('Sagass', () => {
-    it('creates USERS_LOADING', async () => {
+  describe('Sagas', () => {
+    it('creates USERS_LOADING', () => {
       const fakeResponse = {
         ok: true,
         json: jest.fn(),

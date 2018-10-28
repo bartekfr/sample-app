@@ -146,15 +146,5 @@ describe('Common reducer and action creators', () => {
       expect(store.getActions()).toEqual(expectedActions);
       expect(localStorage.removeItem).toHaveBeenCalledWith('loggedIn');
     });
-    it('gakeT ', async () => {
-      localStorage.removeItem.mockClear();
-      const store = mockStore();
-      await store.dispatch(logOut());
-      const expectedActions = [{
-        type: LOG_OUT,
-      }];
-      expect(store.getActions()).toEqual(expectedActions);
-      expect(localStorage.removeItem).toHaveBeenCalledWith('loggedIn');
-    });
   });
 });
