@@ -1,0 +1,83 @@
+@import '../../config/styles/_variables';
+
+.user-edit {
+
+	&__tokens-count {
+		padding-bottom: 15px;
+		margin-bottom: 15px;
+		border-bottom: 1px solid $greyBorder;
+	}
+
+	&__token {
+		padding: 25px  0 15px  0;
+		border-top: 1px solid $greyBorder;
+
+
+		&:first-child {
+			border-top: 0 none;
+		}
+
+		&:last-child {
+			.user-edit__token-index {
+				// display: none;
+			}
+
+			.user-edit__token-add-header {
+				// display: block;
+			}
+		}
+	}
+
+	&__token-status {
+		margin-top: 10px;
+		font-size: 14px;
+		color: $disabledStatusColor;
+
+		span:first-child {
+			display: none;
+		}
+
+		&.active {
+			color: $successFontColor;
+
+			span {
+				display: none
+			}
+
+			span:first-child {
+				display: block;
+			}
+		}
+	}
+
+	&__remove-token {
+		margin-top: 20px;
+	}
+
+	&__token-add-header {
+		display: none;
+	}
+
+	&__isInfinite {
+		margin-top: 30px;
+	}
+
+	&__token-index {
+		margin-bottom: 15px;
+		color: #000;
+		font-weight: 600;
+		font-size: 16px;
+	}
+
+	.form-section {
+		.bt {
+			margin-left: 0;
+		}
+	}
+
+	.page-title-wrapper .form__submit-wrapper {
+		margin-top: 0;
+		padding: 0;
+		border: 0 none;
+	}
+}

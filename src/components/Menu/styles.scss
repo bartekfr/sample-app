@@ -1,0 +1,67 @@
+@import '../../config/styles/_variables';
+
+$mainMargin: 0 (-$gutter / 2);
+
+.navigation {
+	&__item {
+		display: block;
+		margin: 5px 0;
+	}
+	&__link {
+		display: flex;
+		align-items: center;
+		padding: 8px 27px;
+		border-right: 5px solid transparent;
+		font-size: 13px;
+		color: $textColor;
+		text-decoration: none;
+		transition: border .5s, background-color .5s;
+	}
+
+	&__link--active {
+		border-right: 5px solid $mainColor;
+		color: $mainColor;
+		font-weight: 600;
+		background-color: #fff;
+		text-decoration: none;
+	}
+
+	&__ico {
+		display: inline-block;
+		width: 20px;
+		margin-right: 12px;
+		font-size: 16px;
+	}
+
+	&__link:hover {
+		color: $mainColor;
+		text-decoration: none;
+	}
+
+	&__logout {
+		margin-top: 60px;
+	}
+
+	.logOut {
+		padding-left: 25px;
+	}
+}
+
+.navigation--rmenu {
+	margin-top: 20px;
+
+	.navigation__item:not(.navigation__logout) {
+		margin-top: 0;
+	}
+
+	.navigation__link {
+		padding: 8px 20px;
+		border-right: 0 none;
+		border-left: 5px solid transparent;
+	}
+
+	.navigation__link--active {
+		border-left: 5px solid $mainColor;
+		border-right: 0 none;
+	}
+}

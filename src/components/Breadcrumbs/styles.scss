@@ -1,0 +1,35 @@
+@import '../../config/styles/_variables';
+
+.breadcrumbs {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 5px 0 20px 0;
+	font-size: 12px;
+	font-weight: 600;
+
+	&__item {
+		display: inline-block;
+		color: $textColor;
+
+		&:before {
+			display: inline-block;
+			padding: 0 4px;
+			content: '>';
+			color: $textColor;
+		}
+
+		&:first-child:before {
+			display: none;
+		}
+	}
+
+	&__link {
+		color: $mainColor;
+		display: inline-flex;
+		transition: color .5s;
+	}
+
+	&__txt {
+		// text-transform: capitalize;
+	}
+}

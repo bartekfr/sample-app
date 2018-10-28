@@ -1,0 +1,94 @@
+@import './config/styles/_index.scss';
+@import './components/UI/styles.scss';
+
+/* = Generic
+========================================= */
+html,
+body,
+#root,
+.app {
+	min-height: 100vh;
+}
+
+body {
+	min-width: 400px;
+	font-family: 'Open Sans', sans-serif;
+	color: $textColor;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	outline: 0 none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+	color: $textColor;
+	font-weight: normal;
+}
+
+h1 {
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+
+h2 {
+	font-size: 18px;
+	margin-bottom: 15px;
+}
+
+p {
+	font-size: 14px;
+}
+
+button {
+	cursor: pointer;
+	padding: 0;
+	margin: 0;
+	background: none;
+	outline: 0 none;
+	border: 0 none;
+
+	&:focus {
+		outline: 0 none;
+	}
+}
+
+.loader-wrapper {
+	position: absolute;
+	top: 0;
+	left: 5px;
+	right: 5px;
+	bottom: 0;
+	background: rgba(255, 255, 255, 0.6);
+	z-index: 10;
+
+	.loader {
+		margin-top: 200px;
+	}
+}
+
+.loader {
+	margin: 20px auto;
+	border: 5px solid $greyColor;
+	border-top: 5px solid $mainColor;
+	border-radius: 50%;
+	width: 35px;
+	height: 35px;
+	animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}

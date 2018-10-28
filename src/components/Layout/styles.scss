@@ -1,0 +1,186 @@
+@import '../../config/styles/_variables';
+@import './node_modules/bootstrap/scss/bootstrap-grid';
+
+/* = Main Layout areas
+========================================= */
+$mainMargin: ($gutter / 2);
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+// Application top bar
+.appbar {
+	display: flex;
+	margin: 0 (-$mainMargin);
+	flex: 0 0 auto;
+	justify-content: space-between;
+	align-items: center;
+	height: 50px;
+	padding: 14px ($mainMargin);
+	background: $mainColor;
+	color: #fff;
+	font-size: 12px;
+	line-height: 20px;
+	box-shadow: 0px 2px 4px 0 rgba(0, 32, 71, 0.3);
+	z-index: 21;
+
+	.bt {
+		width: auto;
+	}
+}
+
+.logo {
+	flex: 1 0 auto;
+	&__text {
+		color: #fff;
+		font-size: 16px;
+		font-weight: 600;
+	}
+}
+
+.middle {
+	position: relative;
+	display: flex;
+	flex: 1 1 auto;
+	margin: 0 (-$mainMargin);
+}
+
+.aside {
+	display: none;
+	width: 225px;
+	flex: 0 0 auto;
+	padding: 40px 0;
+	background: $bgColor;
+}
+
+.main {
+	position: relative;
+	flex: 1 1 auto;
+	flex-wrap: wrap;
+	padding: 45px ($gutter / 2);
+	overflow: hidden;
+}
+
+.page-title-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 10px;
+	flex-wrap: wrap;
+
+	.page-title {
+		flex: 1 0 auto;
+		margin: 0 45px 15px 0;
+	}
+
+	.page-title__btns {
+		display: flex;
+		flex-wrap: wrap;
+		flex: 1 1 auto;
+	}
+
+	.bt {
+		margin: {
+			bottom: 15px;
+			right: 0;
+		};
+	}
+}
+
+
+
+/* = Components
+========================================= */
+
+// Login views
+.login {
+	max-width: 415px;
+	margin: 20px;
+	flex: 1 1 auto;
+	margin-bottom: 50px;
+	text-align: center;
+
+	&__content {
+		margin-bottom: 30px;
+		box-shadow: 0px 4px 14px 0 rgba(0, 32, 71, 0.3);
+	}
+
+	&__text {
+		font-size: 14px;
+		line-height: 1.7;
+		color: #857e7f;
+		text-indent: 20px;
+	}
+
+	&__error {
+		padding: 10px 0;
+		font-size: 14px;
+		color: $alertColor;
+	}
+
+	&__link {
+		color: $linkColor;
+		text-decoration: underline;
+		font-size: 12px;
+		font-weight: bold;
+		text-transform: uppercase;
+		letter-spacing: 1.2px;
+	}
+
+	&__form {
+		margin: auto;
+		padding: 30px 20px;
+		background: #fff;
+		text-align: left;
+		max-width: 600px;
+
+		.form-control-label {
+			text-transform: none;
+			font-size: 14px;
+			color: #857e7f;
+			font-weight: normal;
+			letter-spacing: 0;
+		}
+
+		.form__submit-wrapper {
+			margin-top: 20px;
+			padding: 0;
+			border: 0 none;
+			display: flex;
+			justify-content: center;
+
+			.bt {
+				font-weight: normal;
+			}
+		}
+	}
+}
+
+.lang-switcher {
+	&__link {
+		margin: 5px;
+		padding: 5px;
+		color: #fff;
+		text-transform: uppercase;
+
+		&.active {
+			font-weight: 600;
+		}
+	}
+}
+
+/* = Media queries
+========================================= */
+@include media-breakpoint-up(md) {
+	.aside {
+		display: block;
+	}
+
+	.appbar {
+		margin: 0 (-$mainMargin);
+		padding: 14px ($mainMargin);
+	}
+}
